@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     const { length } = req.params
     const password = generateSimplePassword(length)
 
-    res.json(password)
+    res.json({ password: password })
 })
 
 module.exports = router;
