@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.use('/api', apiRoutes)
-
+app.use(cors())
 const server = app.listen(PORT, () => {
     console.log('servidor HTTP');
 })
