@@ -6,10 +6,10 @@ const generateSimplePassword = (props) => {
     let password = ['']
 
     {
-        [...Array(length)].fill(1).forEach((x, index) => {
+        [...Array(length > 1 ? length : 1)].fill(1).forEach((x, index) => {
             let randomIndex = getRandom({ length: ABC.length })
             let letter = ABC[randomIndex]
-            password[0] = letter;
+            if (length >= 1) { password[0] = letter }
             password = [...password, letter]
         })
     }

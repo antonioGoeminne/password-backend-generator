@@ -7,7 +7,7 @@ const PORT = 8080
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use('/', apiRoutes)
+app.use('/api', apiRoutes)
 
 const server = app.listen(PORT, () => {
     console.log('servidor HTTP');
