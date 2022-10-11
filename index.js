@@ -1,15 +1,14 @@
 const express = require('express')
-var cors = require('cors')
+const cors = require('cors')
 const apiRoutes = require('./routers/app.routers')
-
 const app = express()
 const PORT = 8080
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use('/api', apiRoutes)
 app.use(cors())
+app.use('/api', apiRoutes)
 const server = app.listen(PORT, () => {
     console.log('servidor HTTP');
 })
