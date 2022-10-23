@@ -6,7 +6,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "build": "yarn",
+    "build": "npm",
     "start-dev": "nodemon index.js"
   }
 }
